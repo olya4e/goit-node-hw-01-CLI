@@ -1,6 +1,5 @@
 const contacts = require("./contacts");
 const { program } = require("commander");
-// const argv = require("yargs").argv;
 
 program
   .option("-a, --action <type>", "choose action")
@@ -38,16 +37,5 @@ async function invokeAction({ action, id, name, email, phone }) {
       console.warn("\x1B[31m Unknown action type!");
   }
 }
-
-// invokeAction({ action: "list" });
-// invokeAction({ action: "get", contactId: "4" });
-// invokeAction({
-//   action: "add",
-//   name: "dfdf",
-//   email: "fr@gj.hj",
-//   phone: "909090",
-// });
-
-// invokeAction({ action: "remove", contactId: "10" });
 
 invokeAction(argv);
