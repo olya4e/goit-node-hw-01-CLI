@@ -37,7 +37,6 @@ async function addContact({ name, email, phone }) {
     email,
     phone,
   };
-  // contacts.push(newContact);
   const newContactsList = [...contacts, newContact];
   await updateContacts(newContactsList);
   return newContact;
